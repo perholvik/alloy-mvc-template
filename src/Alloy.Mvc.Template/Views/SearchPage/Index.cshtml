@@ -1,4 +1,4 @@
-﻿@using EPiServer.Editor
+@using EPiServer.Editor
 @using EPiServer.Security
 @model SearchContentModel
 
@@ -21,15 +21,15 @@
     </div>
 </div>
 
-@if(Model.Hits != null)
+@if (Model.Hits != null)
 {
     <div class="row">
         <div class="span8 grayHead">
             <h2>@Html.Translate("/searchpagetemplate/result")</h2>
             <p>
-                @Html.Translate("/searchpagetemplate/searchfor") <i>@Model.SearchedQuery</i> 
+                @Html.Translate("/searchpagetemplate/searchfor") <i>@Model.SearchedQuery</i>
                 @Html.Translate("/searchpagetemplate/resultedin")
-                @if(Model.NumberOfHits > 0)
+                @if (Model.NumberOfHits > 0)
                 {
                     @Model.NumberOfHits
                 }
@@ -41,20 +41,43 @@
             </p>
         </div>
     </div>
-    
+
     <div class="row">
-        <div class="span8 SearchResults">
+        <div class="span6 SearchResults">
             @foreach (var hit in Model.Hits)
             {
                 <div class="listResult">
                     <h3><a href="@hit.Url">@hit.Title</a></h3>
                     <p>@hit.Excerpt</p>
-                    <hr />
+                    <hr/>
                 </div>
             }
         </div>
+
+        <div class="span2">
+            <div class="well">
+                <h2>Sections</h2>
+                <span><em>Hardkodet eksempel</em></span>
+                <ul class="nav nav-list">
+                    <li class="active">
+                        <a href="#"> All (10)</a>
+                    </li>
+                    <li>
+                        <a href="#">About us (6)</a>
+                    </li>
+                    <li>
+                        <a href="#">Alloy Plan (2)</a>
+                    </li>
+                    <li>
+                        <a href="#">How to buy (1)</a>
+                    </li>
+                    <li>
+                        <a href="#">Alloy Track (1)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    
 }
 
 @if(Model.SearchServiceDisabled && PrincipalInfo.HasEditAccess)
