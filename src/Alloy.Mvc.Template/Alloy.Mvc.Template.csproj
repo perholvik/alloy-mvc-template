@@ -357,7 +357,13 @@
     <Compile Include="Business\Initialization\DisplayModesInitialization.cs" />
     <Compile Include="Business\Initialization\DisplayRegistryInitialization.cs" />
     <Compile Include="Business\Initialization\FilterConfig.cs" />
-    <Compile Include="Business\SearchService.cs" />
+    <Compile Include="Business\Initialization\FindInitialization.cs" />
+    <Compile Include="Business\Search\ISearchProvider.cs" />
+    <Compile Include="Business\Search\SearchParameters.cs" />
+    <Compile Include="Business\Search\SearchResult.cs" />
+    <Compile Include="Business\Search\SearchService.cs" />
+    <Compile Include="Business\Search\ISearchResult.cs" />
+    <Compile Include="Business\Search\ISearchResultItem.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\SearchPageController.cs" />
     <Compile Include="Models\Pages\ISearchPage.cs" />
@@ -423,13 +429,16 @@
     <Compile Include="Models\SiteImageUrl.cs" />
     <Compile Include="Models\ViewModels\ContactBlockModel.cs" />
     <Compile Include="Models\ViewModels\ContentRenderingErrorModel.cs" />
+    <Compile Include="Models\ViewModels\Filters\FilterMenu.cs" />
+    <Compile Include="Models\ViewModels\FilterViewModel.cs" />
     <Compile Include="Models\ViewModels\ImageViewModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\LayoutModel.cs" />
     <Compile Include="Models\ViewModels\PageListModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
     <Compile Include="Models\ViewModels\PreviewModel.cs" />
-    <Compile Include="Models\ViewModels\SearchContentModel.cs" />
+    <Compile Include="Models\ViewModels\SearchPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\Search\SearchQueryViewModel.cs" />
     <Compile Include="Models\ViewModels\VideoViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -443,6 +452,7 @@
     <None Include="Models\Blocks\_ReadMe.txt" />
     <None Include="Models\Pages\_ReadMe.txt" />
     <Content Include="modules\_protected\EPiServer.Search.Cms\IndexContent.aspx" />
+    <Content Include="Resources\Javascripts\alloy.search.js" />
     <Content Include="Resources\LanguageFiles\Display.xml" />
     <Content Include="Resources\LanguageFiles\ContentTypeNames.xml">
       <SubType>Designer</SubType>
@@ -512,6 +522,9 @@
     <Content Include="modules\_protected\CMS\web.config" />
     <Content Include="modules\_protected\CMS\CMS.zip" />
     <Content Include="Views\SearchPage\Index.cshtml" />
+    <Content Include="Views\SearchPage\_Filters.cshtml" />
+    <Content Include="Views\Shared\FilterMenu\FilterMenuPageType.cshtml" />
+    <Content Include="Views\Shared\FilterMenu\FilterMenuPageTypeItem.cshtml" />
     <None Include="Views\_ReadMe.txt" />
     <Content Include="web.config">
       <SubType>Designer</SubType>

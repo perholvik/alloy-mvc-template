@@ -1,0 +1,8 @@
+@model AlloyTemplates.Models.ViewModels.Filters.FilterMenu
+
+<h2>FilterMenu</h2>
+
+@foreach (var item in Model.Items)
+{
+    @Html.Partial("FilterMenu/FilterMenuPageTypeItem", item)
+}
