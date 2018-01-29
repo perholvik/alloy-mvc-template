@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Web;
 using EPiServer.Core;
 using EPiServer.Search;
@@ -10,7 +10,7 @@ using EPiServer.ServiceLocation;
 
 namespace AlloyTemplates.Business
 {
-    public class SearchService
+    public class SearchService : ISearcyService
     {
         private readonly SearchHandler _searchHandler;
         private readonly IContentLoader _contentLoader;

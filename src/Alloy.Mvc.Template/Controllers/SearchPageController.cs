@@ -20,10 +20,12 @@ namespace AlloyTemplates.Controllers
     public class SearchPageController : PageControllerBase<SearchPage>
     {
 
+        private const int MaxResults = 40;
+        private readonly ISearchService _searchService;
 
-        public SearchPageController()
+        public SearchPageController(ISearchService searchService)
         {
-
+            _searchService = searchService;
         }
 
         [ValidateInput(false)]
