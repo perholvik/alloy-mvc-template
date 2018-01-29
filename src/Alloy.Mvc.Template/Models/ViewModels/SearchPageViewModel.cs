@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using AlloyTemplates.Business.Search;
 using AlloyTemplates.Models.Pages;
+using EPiServer.Find.Api;
 using EPiServer.Find.UnifiedSearch;
 
 namespace AlloyTemplates.Models.ViewModels
@@ -15,6 +16,9 @@ namespace AlloyTemplates.Models.ViewModels
 
         public string Query { get; set; }
         public SearchResult Result { get; set; }
+
+        //public FilterModel Filter { get; set; }
+        public FacetResults Filter { get; set; }
 
 
     }

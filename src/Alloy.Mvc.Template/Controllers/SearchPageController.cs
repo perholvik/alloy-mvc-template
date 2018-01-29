@@ -44,6 +44,7 @@ namespace AlloyTemplates.Controllers
                 var results = _searchProvider.ExecuteSearch(searchQuery);
                 model.Result = results;
                 model.Query = query;
+                model.Filter = results.Facets;
             }
 
 

@@ -5,7 +5,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layouts/_TwoPlusOne.cshtml";
 }
-@*@Html.Partial("_Filters", Model.FilterModel)*@
+@Html.Partial("_Filters", Model.Filter)
 
 @using (Html.BeginForm(FormMethod.Post))
 {
@@ -24,6 +24,8 @@
                     @item.PreviewText
                 </li>
             }
+
+            
         </ul>
     </div>
 }
