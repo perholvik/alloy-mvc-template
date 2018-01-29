@@ -9,7 +9,7 @@
 
 @using (Html.BeginForm(FormMethod.Post))
 {
-    <input type="text" tabindex="1" name="q" value ="@Model.Query" />
+    <input type="text" tabindex="1" name="query" value ="@Model.Query" />
     <input type="submit" tabindex="2" class="btn" value="Search" />
 }
 @if (Model.Result != null)
