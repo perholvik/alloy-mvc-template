@@ -1,0 +1,9 @@
+@model AlloyTemplates.Models.ViewModels.FilterViewModel
+@{
+    ViewBag.Title = "_Filters";
+    Layout = null;
+}
+
+<h2>_Filters</h2>
+
+@Html.Partial("FilterMenu/FilterMenuPageType", Model.PageTypeList)
