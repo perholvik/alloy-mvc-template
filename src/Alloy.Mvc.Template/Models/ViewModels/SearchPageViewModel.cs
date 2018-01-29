@@ -16,6 +16,6 @@ namespace AlloyTemplates.Models.ViewModels
         public string Query { get; set; }
         public SearchResult Result { get; set; }
 
-        //public FilterViewModel FilterModel { get; set; }
+
     }
 }

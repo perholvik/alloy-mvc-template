@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using AlloyTemplates.Business.Search;
 using StructureMap;
 
 namespace AlloyTemplates.Business.Initialization
@@ -18,11 +19,12 @@ namespace AlloyTemplates.Business.Initialization
             {
                 x.Scan(y =>{
                     y.TheCallingAssembly();
-                    y.AssemblyContainingType<ISearchService>();
+                    y.AssemblyContainingType<ISearchProvider>();
                     y.WithDefaultConventions();
                 });
+                x.For<ISearchProvider>().Use<SearchProvider>();
 
-       
+
             });
             
         }

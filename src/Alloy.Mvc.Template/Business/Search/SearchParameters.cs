@@ -16,10 +16,6 @@ namespace AlloyTemplates.Business.Search
         public string SearchString { get; set; }
         public int HitsPrPage { get; set; }
 
-
-        public string language;
-        public string publishedDate;
-        public string fileFormat;
         public int page;
     }
 }

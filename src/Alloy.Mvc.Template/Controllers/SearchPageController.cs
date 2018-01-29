@@ -37,11 +37,15 @@ namespace AlloyTemplates.Controllers
                 return View(model);
             }
 
-            var hitsPrPage = currentPage.ResultLimit != 0 ? currentPage.ResultLimit : HitsContentPrPage;
-            var searchQuery = new SearchParameters{SearchString = query, HitsPrPage = hitsPrPage };
-            var results = _searchProvider.ExecuteSearch(searchQuery);
-            model.Result = results;
-            model.Query = query;
+            if (!string.IsNullOrWhiteSpace(query))
+            {
+                var hitsPrPage = currentPage.ResultLimit != 0 ? currentPage.ResultLimit : HitsContentPrPage;
+                var searchQuery = new SearchParameters { SearchString = query, HitsPrPage = hitsPrPage };
+                var results = _searchProvider.ExecuteSearch(searchQuery);
+                model.Result = results;
+                model.Query = query;
+            }
+
 
             return View(model);
         }

@@ -20,7 +20,7 @@
             @foreach (var item in Model.Result.Hits)
             { 
                 <li>
-                    <h4><a href="@item.Url">@item.Name</a></h4>
+                    <h4><a href="@item.Url">@item.Title</a></h4>
                     @item.PreviewText
                 </li>
             }
@@ -28,12 +28,5 @@
     </div>
 }
 
-@section BottomScript
-{
-    @*<script type="text/javascript">
-        $(function () {
-            Alloy.Search.Init();
-        });
-    </script>*@
 
-}
+

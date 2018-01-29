@@ -7,7 +7,7 @@ namespace AlloyTemplates.Business.Search
 {
     public interface ISearchResultItem
     {
-        string Name { get; set; }
+        string Title { get; set; }
         string Url { get; set; }
     }
 }
